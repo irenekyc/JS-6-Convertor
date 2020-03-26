@@ -24,7 +24,7 @@ const convert = ()=>{
     TempOutputArea.innerHTML=`<p class="result"> ${TempOutputDegree.toFixed(2)} &#176;${TempOutputUnit} </p>`
 }
 
-const convertWeight1 = ()=>{
+const convertWeight = ()=>{
     let WeightInput = {
         value: document.getElementById('weightInput').value,
         unit : WeightUnit.options[WeightUnit.selectedIndex].value
@@ -68,8 +68,8 @@ const convertHeight2 = ()=>{
         feet: document.getElementById('feetInput').value,
         inch : document.getElementById('inchInput').value,
     }
-    if (HeightInput2.feet < 0 || HeightInput2.inch<0) {
-        return HeightOutputArea1.innerHTML=" The value has to be greater than 0"
+    if (HeightInput2.feet < 0 || HeightInput2.inch < 0) {
+        return HeightOutputArea2.innerHTML=" The value has to be greater than 0"
     }
     HeightOutput2 = parseFloat((HeightInput2.feet * 30.48) + (HeightInput2.inch*2.54))
      HeightOutputArea2.innerHTML=`<p class="result">  approximately ${HeightOutput2.toFixed(2)}  cm (${(HeightOutput2/100).toFixed(2)} m) </p>`

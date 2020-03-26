@@ -14,6 +14,7 @@ html {
     height:100vh;
     text-align:center;
     font-size:18px;
+    scroll-behavior: smooth;
 }
 
 h1{
