@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-6-Unit Convertor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="thermometer-three-quarters-solid.svg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1> Unit Convertor</h1>
+    <ul class="menu"> <li><a href="#temperature-link"> Temperature </a></li>
+        <li><a href="#weight-link"> Weight </a></li>
+        <li><a href="#height-link"> Height</a></li>
+        <li><a href="#distance-link"> Distance</a></li> </ul>
+
+    <div class="temperature-convertor convertor" id="temperature-link">
+        <h1> Temperature </h1>
+        <div class="row">
+            <input type="number" name="tempertureInput" id="temperatureInput" value="0" required>
+            <select id="temperature-unit" name="temperature-unit">
+                <option value="C">Celsius</option>
+                <option value="F" selected>Fahrenheit</option>
+              </select>
+        </div>
+        <input type="submit" value="Convert" onclick="convert()">
+        <div class="output-area-temp output-area">
+
+        </div>
+    </div>
+
+    <div class="weight-convertor convertor" id="weight-link">
+        <h1> Weight</h1>
+        <div class="row">
+            <input type="number" name="weightInput" id="weightInput" value = "1" required>
+            <select id="weight-unit" name="weight-unit">
+                <option value="lbs"> Pounds </option>
+                <option value="kg" selected> Kilograms </option>
+              </select>
+        </div>
+        <input type="submit" value="Convert" onclick="convertWeight()">
+        <div class="output-area-weight output-area">
+
+        </div>
+    </div>
+
+    <div class="height-convertor-1 convertor" id="height-link">
+        <h1> Height </h1>
+        <br>
+        <h3> from cm/m to feet</h3>
+        <br>
+        <div class="row">
+            <input type="number" name="heightInput1" id="heightInput1" value = "1" required>
+            <select id="height-unit-1" name="height-unit-1">
+                <option value="cm" selected> Centimeter </option>
+                <option value="m"> Meter </option>
+              </select>
+        </div>
+        <input type="submit" value="Convert" onclick="convertHeight1()">
+        <div class="output-area-height-1 output-area">
+
+        </div>
+
+        <br>
+        <h3> from feet / inch to cm</h3>
+        <br>
+        <div class="row">
+            <input type="number" name="feetInput" id="feetInput" value = "4" required>
+            <label for ="feetInput"> Feet </label>
+            <input type="number" name="inchInput" id="inchInput" value = "1" required>
+            <label for ="inchInput"> Inch </label>
+        </div>
+        <input type="submit" value="Convert" onclick="convertHeight2()">
+        <div class="output-area-height-2 output-area">
+
+        </div>
+    </div>
+
+    <div class="distance-convertor convertor" id="distance-link">
+        <h1> Distance </h1>
+        <div class="row">
+            <input type="number" name="distanceInput" id="distanceInput" value = "1" required>
+            <select id="distance-unit" name="distance-unit">
+                <option value="miles"> Miles </option>
+                <option value="km" selected> Kilometers </option>
+              </select>
+        </div>
+        <input type="submit" value="Convert" onclick="convertDistance()">
+        <div class="output-area-distance output-area">
+
+        </div>
+    </div>
+        <script src="app.js"></script>
+</body>
+</html>
